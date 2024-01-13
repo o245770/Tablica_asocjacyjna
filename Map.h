@@ -16,6 +16,7 @@ private:
 	public:
 		CV value;
 		CK key;  
+
 		Pair(CK k, CV v) : value(v), key(k){};
 		
 		friend ostream& operator << (ostream& stream, const Pair& p) 
@@ -64,3 +65,4 @@ public:
 };
 
 #endif
+
