@@ -14,9 +14,8 @@ private:
 	class Pair
 	{	
 	public:
-		CV value;
-		CK key;  
-
+		CV value; 
+		CK key; 
 		Pair(CK k, CV v) : value(v), key(k){};
 		
 		friend ostream& operator << (ostream& stream, const Pair& p) 
@@ -51,7 +50,7 @@ public:
 			if(elements[i].key == ky) return &elements[i].value;
 		}
 		
-		return NULL;
+		throw out_of_range("Failed to find the key");
 	}
 	
 	friend ostream& operator << (ostream& stream, const Map& m) 
@@ -65,4 +64,3 @@ public:
 };
 
 #endif
-
